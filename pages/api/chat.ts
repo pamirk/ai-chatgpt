@@ -34,13 +34,13 @@ const handler = async (req: Request): Promise<Response> => {
     temperature: process.env.AI_TEMP ? parseFloat(process.env.AI_TEMP) : 0.7,
     max_tokens: process.env.AI_MAX_TOKENS
       ? parseInt(process.env.AI_MAX_TOKENS)
-      : 100,
+      : 2,
     top_p: 1,
     frequency_penalty: 0,
     presence_penalty: 0,
     stream: true,
     user: body?.user,
-    n: 1,
+    n: 1
   }
 
   const stream = await OpenAIStream(payload)

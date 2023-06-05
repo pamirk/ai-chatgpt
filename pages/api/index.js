@@ -110,7 +110,7 @@ async function analyzeAndForwardEmails(auth) {
     console.error('Error analyzing and forwarding emails:', err);
   }
 }
-
+//
 
 // Retrieve email content
 async function getEmailContent(gmail, messageId) {
